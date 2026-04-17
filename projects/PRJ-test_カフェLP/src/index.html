@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>喫茶まほろば | 日常の喧騒から離れた隠れ家カフェ</title>
+  <meta name="description" content="架空のカフェ「喫茶まほろば」のランディングページ。こだわりのコーヒーと落ち着いた空間で皆様をお待ちしております。">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="glass-nav" aria-label="メインナビゲーション">
+    <div class="nav-container">
+      <div class="nav-brand"><a href="#hero">まほろば</a></div>
+      <ul class="nav-links">
+        <li><a href="#concept">こだわり</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#" class="nav-reserve btn-primary" aria-label="席を予約する"><!-- TODO: 実務URLに変更後 target="_blank" rel="noopener noreferrer" を再追加 -->席を予約する</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section fade-in">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1920" alt="喫茶まほろば 店内の様子" loading="eager" class="hero-img">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">喫茶まほろば</h1>
+        <p class="hero-copy">時を忘れる、一杯と空間を。</p>
+        <a href="#" class="btn-primary hero-cta"><!-- TODO: 実務URLに変更後 target="_blank" rel="noopener noreferrer" を再追加 -->席を予約する</a>
+      </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="concept-section section-padding fade-in">
+      <div class="container">
+        <div class="concept-grid">
+          <div class="concept-text">
+            <h2 class="section-title">Concept</h2>
+            <p class="concept-body">
+              日常の喧騒から少しだけ離れて、自分だけの静かな時間を過ごしませんか。<br>
+              喫茶まほろばは、自家焙煎のコーヒーと、無垢の木材を活かした温もりある空間で、訪れるすべての方に「ほっとするひととき」を提供します。<br>
+              あたたかい光が差し込む店内で、心ゆくまでおくつろぎください。
+            </p>
+          </div>
+          <div class="concept-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800" alt="こだわりのドリップコーヒーを淹れる様子" loading="lazy" class="concept-img lazy-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title text-center">Menu</h2>
+        <div class="menu-grid">
+          
+          <!-- Menu Card 1 -->
+          <article class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=600" alt="まほろばブレンド" loading="lazy" class="lazy-img">
+            </div>
+            <div class="menu-card-content">
+              <h3 class="menu-name">まほろばブレンド</h3>
+              <p class="menu-price">¥ 650 <span class="tax-note">(税込)</span></p>
+            </div>
+          </article>
+
+          <!-- Menu Card 2 -->
+          <article class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&q=80&w=600" alt="自家製チーズケーキ" loading="lazy" class="lazy-img">
+            </div>
+            <div class="menu-card-content">
+              <h3 class="menu-name">自家製ベイクドチーズケーキ</h3>
+              <p class="menu-price">¥ 580 <span class="tax-note">(税込)</span></p>
+            </div>
+          </article>
+
+          <!-- Menu Card 3 -->
+          <article class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?auto=format&fit=crop&q=80&w=600" alt="季節のフルーツサンド" loading="lazy" class="lazy-img">
+            </div>
+            <div class="menu-card-content">
+              <h3 class="menu-name">季節のフルーツサンド</h3>
+              <p class="menu-price">¥ 720 <span class="tax-note">(税込)</span></p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="access" class="access-section section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title text-center">Access</h2>
+        <div class="access-grid">
+          <div class="access-info">
+            <dl class="info-list">
+              <dt>住所</dt>
+              <dd>東京都渋谷区神宮前 1-2-3</dd>
+              <dt>最寄り駅</dt>
+              <dd>JR渋谷駅 徒歩5分</dd>
+              <dt>営業時間</dt>
+              <dd>月〜金 10:00–18:00</dd>
+              <dt>定休日</dt>
+              <dd>土日祝</dd>
+            </dl>
+            <a href="#" class="btn-primary"><!-- TODO: 実務URLに変更後 target="_blank" rel="noopener noreferrer" を再追加 -->席を予約する</a>
+          </div>
+          <div class="access-map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3241.74794270923!2d139.70200877578672!3d35.65858047259469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2sShibuya%20Station!5e0!3m2!1sen!2sjp!4v1700000000000!5m2!1sen!2sjp" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="喫茶まほろばのGoogleマップ">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">喫茶まほろば</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/example/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 喫茶まほろば. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
