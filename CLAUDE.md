@@ -28,6 +28,7 @@
 | 「会議準備」「議事録」「ミーティング」 | protocols/meeting-prep.md | 会議前の準備整理 or 会議後の議事録作成 |
 | 「調べて」「リサーチ」「競合」 | protocols/research.md | 構造化されたリサーチを実行 |
 | 新規タスク・案件の依頼 | protocols/project-mgmt.md | INDEX.md確認→プロジェクト作成or既存に追加 |
+| フォーム、問い合わせ | protocols/form-automation.md | Googleフォーム回答の確認と各ツールへの情報展開 |
 
 該当なしの場合は、行動原則に従って直接対応する。
 

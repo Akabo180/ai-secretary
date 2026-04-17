@@ -8,10 +8,10 @@
 .vscode/
 .idea/
 
-# ユーザー固有の設定（テンプレートのまま配布するため）
-# 初回セットアップ後にこの2行をコメントアウトすれば git 管理できます
-# config/profile.md
-# config/tools.md
+# ユーザー固有の設定
+config/profile.md
+config/tools.md
+protocols/form-automation.md
 
 # AI学習記録（個人データのため）
 memory/learnings.md
