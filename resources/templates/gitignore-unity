@@ -1,0 +1,94 @@
+# Unity / VRChat / cluster プロジェクト向け .gitignore
+#
+# 適用手順: このファイルをプロジェクトルートに .gitignore としてコピーする。
+#
+# 除外方針:
+#   - 自動生成される中間ファイル・キャッシュ・ビルド成果物は除外
+#   - Assets/, ProjectSettings/, Packages/ 配下のテキスト資産は追跡対象
+#   - 秘密情報（.env, API キー）は除外
+
+# ---- Unity 自動生成 ----
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Dd]ownload[Cc]ache/
+
+# MonoDevelop / VS / Rider 固有
+.vs/
+.idea/
+.vscode/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb.meta
+*.opendb
+*.VC.db
+*.apk
+*.unitypackage.meta
+*.aab
+*.DS_Store
+Thumbs.db
+
+# Unity Editor 生成の一時ファイル
+sysinfo.txt
+*.stackdump
+crashlytics-build.properties
+
+# Asset Import Worker ログ
+[Aa]ssets/[Aa]ssetStoreTools*
+
+# ---- ビルド成果物 ----
+ExportedObj/
+.consulo/
+.builds/
+*.exe
+*.app
+
+# ---- VRChat SDK ----
+# SDK のローカル一時生成物
+Packages/vpm-manifest.json.bak
+ProjectSettings/*.bak
+
+# ---- cluster SDK ----
+# 自動生成キャッシュ（SDK バージョンにより調整）
+Packages/com.cluster.*.tmp
+
+# ---- シークレット・環境変数 ----
+.env
+.env.local
+.env.*.local
+*.secret
+secrets.json
+credentials.json
+
+# ---- OS 固有 ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---- その他 ----
+*.orig
+*.swp
+*~
+*.bak
+*.log

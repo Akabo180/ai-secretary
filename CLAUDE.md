@@ -27,6 +27,9 @@
 | 「メール確認」「受信トリアージ」 | protocols/email-triage.md | メールを優先度分類し、対応案を提示 |
 | 「会議準備」「議事録」「ミーティング」 | protocols/meeting-prep.md | 会議前の準備整理 or 会議後の議事録作成 |
 | 「調べて」「リサーチ」「競合」 | protocols/research.md | 構造化されたリサーチを実行 |
+| 「要件定義」「requirements 作って」「仕様に落として」 | protocols/requirements-definition.md | requirements.md を生成し Antigravity に引き渡す |
+| 「PR」「プルリク」「コードレビュー」「コミットメッセージ」 | protocols/pr-review.md | PR本文・コミットメッセージ生成と5観点レビュー |
+| 「アセット組み込み」「このモデル使って」「アセット監査」 | protocols/asset-pipeline.md | アセットのライセンス・仕様監査と取り込み |
 | 新規タスク・案件の依頼 | protocols/project-mgmt.md | INDEX.md確認→プロジェクト作成or既存に追加 |
 | フォーム、問い合わせ | protocols/form-automation.md | Googleフォーム回答の確認と各ツールへの情報展開 |
 
@@ -64,3 +67,27 @@
 - `archive/` — 完了・非アクティブ（PARA: Archive）
 
 詳細は `protocols/project-mgmt.md` を参照。
+
+## 開発パイプライン
+
+Web・3D・ゲーム案件は共通して以下の4段構成で進める。領域ごとに Stage 2 の実装スキルと、要件定義テンプレートが切り替わる。
+
+| 段階 | 担当 | 入力 | 出力 | 参照 |
+|------|------|------|------|------|
+| 1. 要件定義 | Claude Cowork | 依頼・リサーチ | requirements.md 系 | protocols/requirements-definition.md |
+| 2a. ゼロイチ実装（スクリプト層） | Google Antigravity | requirements.md | 生成コード、report.md | 領域別スキル（下表） |
+| 2b. アセット組込（ゲーム・3D案件のみ） | 人間 | アセット台帳 | シーン・Prefab | protocols/asset-pipeline.md |
+| 3. 洗練・テスト | 人間 + Copilot Pro | 2 の成果物 | テスト付きコード・最終シーン | .github/copilot-instructions.md |
+| 4. PR・レビュー | Copilot + Claude | 差分 | PR本文・レビュー指摘 | protocols/pr-review.md |
+
+### 領域別の実装スキル・要件テンプレ
+
+| 領域 | 要件テンプレ | 実装スキル |
+|------|------------|----------|
+| Web開発 | resources/templates/requirements.md | skills/web-coder/SKILL.md |
+| VRChatワールド | resources/templates/requirements-vrchat-world.md | skills/vrchat-world-coder/SKILL.md |
+| Unityアプリ（未整備） | 未作成 | 未作成 |
+| Blenderアドオン（未整備） | 未作成 | 未作成 |
+| clusterワールド（未整備） | 未作成 | 未作成 |
+
+各プロジェクト配下のフォルダ構成と初期セットアップ手順は `protocols/project-mgmt.md` の該当節を参照する。

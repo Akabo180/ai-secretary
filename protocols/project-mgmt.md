@@ -17,7 +17,7 @@ PARAメソッドに基づくファイル管理ルール。
 
 INDEX.md の最大番号 + 1 で連番を振る。
 
-### フォルダ構成
+### フォルダ構成（共通）
 
 ```
 projects/PRJ-001_案件名/
@@ -26,6 +26,64 @@ projects/PRJ-001_案件名/
 ├── resources/      ← 参考資料
 └── notes/          ← 作業メモ
 ```
+
+### フォルダ構成（Web開発案件）
+
+Web開発案件の場合は、上記に加えて次を配置する。
+
+```
+projects/PRJ-001_案件名/
+├── README.md
+├── requirements.md   ← 要件定義書（Antigravity が参照）
+├── report.md         ← Antigravity の実装報告
+├── src/              ← 実装コード
+├── tests/            ← テストコード
+├── .github/
+│   └── copilot-instructions.md  ← ルートからのコピー or シンボリックリンク
+├── output/
+├── resources/
+└── notes/
+```
+
+requirements.md の作成手順は `protocols/requirements-definition.md` を参照する。
+実装スキルは `skills/web-coder/SKILL.md` を使う。
+PR作成・レビューは `protocols/pr-review.md` を使う。
+
+### フォルダ構成（Unity / VRChatワールド案件）
+
+```
+projects/PRJ-001_案件名/
+├── README.md
+├── requirements-vrchat-world.md   ← 要件定義書（VRChat派生）
+├── report.md                       ← 実装報告
+├── .gitattributes                  ← resources/templates/gitattributes-unity からコピー
+├── .gitignore                      ← resources/templates/gitignore-unity からコピー
+├── Assets/
+│   ├── _Project/
+│   │   ├── Scripts/                ← 自プロジェクトのUdonSharp
+│   │   ├── Editor/                 ← エディタ拡張
+│   │   ├── Scenes/
+│   │   ├── Prefabs/
+│   │   ├── Materials/
+│   │   └── Audio/
+│   └── External/                   ← 購入/外部アセット（ベンダー別）
+├── Packages/                       ← VCC 管理下の VPM パッケージ
+├── ProjectSettings/
+├── resources/
+│   └── asset-ledger.md             ← アセット台帳（protocols/asset-pipeline.md）
+└── notes/
+```
+
+初期セットアップ手順:
+
+1. Unity Hub で要件定義書のUnityバージョンをインストールする
+2. VRChat Creator Companion で新規 World Project を作成する
+3. `resources/templates/git-lfs-setup.md` の手順で Git LFS を初期化する
+4. `resources/templates/gitattributes-unity` と `gitignore-unity` をプロジェクトルートへコピーする
+5. `resources/templates/requirements-vrchat-world.md` を `requirements-vrchat-world.md` としてプロジェクトに配置する
+
+実装スキルは `skills/vrchat-world-coder/SKILL.md` を使う。
+アセットの取り込みは `protocols/asset-pipeline.md` を通す。
 
 ## ステータス管理
 

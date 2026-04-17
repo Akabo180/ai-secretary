@@ -1,0 +1,115 @@
+# Unity / VRChat / cluster プロジェクト向け .gitattributes
+# Git LFS で追跡するバイナリ資産を定義する。
+#
+# 新規プロジェクトへの適用手順:
+#   1. このファイルをプロジェクトルートに .gitattributes としてコピー
+#   2. git lfs install
+#   3. 既存リポジトリに途中から導入する場合は git lfs migrate を実行
+#   4. git add .gitattributes && git commit -m "chore: configure Git LFS"
+#
+# 注意:
+#   - LFS対象を変更した場合、既存のコミット履歴には遡及されない
+#   - 100MB 超のファイルをLFS未対応で push すると GitHub に拒否される
+
+# ---- 3Dモデル ----
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.FBX filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.blend1 filter=lfs diff=lfs merge=lfs -text
+*.dae filter=lfs diff=lfs merge=lfs -text
+*.3ds filter=lfs diff=lfs merge=lfs -text
+*.max filter=lfs diff=lfs merge=lfs -text
+*.ma filter=lfs diff=lfs merge=lfs -text
+*.mb filter=lfs diff=lfs merge=lfs -text
+*.gltf filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
+
+# ---- テクスチャ・画像 ----
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.PSD filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.TGA filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text
+*.bmp filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+
+# ---- オーディオ ----
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.WAV filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.aiff filter=lfs diff=lfs merge=lfs -text
+
+# ---- 動画 ----
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+*.mkv filter=lfs diff=lfs merge=lfs -text
+
+# ---- フォント ----
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.otf filter=lfs diff=lfs merge=lfs -text
+*.woff filter=lfs diff=lfs merge=lfs -text
+*.woff2 filter=lfs diff=lfs merge=lfs -text
+
+# ---- アーカイブ・パッケージ ----
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.rar filter=lfs diff=lfs merge=lfs -text
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+
+# ---- その他バイナリ ----
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.dylib filter=lfs diff=lfs merge=lfs -text
+*.pdb filter=lfs diff=lfs merge=lfs -text
+
+# ---- Unity固有 ----
+# LightingData.asset はテキストだが巨大になるため LFS 推奨
+*.asset filter=lfs diff=lfs merge=lfs -text binary
+
+# ---- テキスト扱いの固定（改行統一） ----
+# Unityが生成するメタファイル・シリアライズファイルは diff を取れる形で管理する
+*.meta -filter -diff -merge text eol=lf
+*.unity -filter -diff -merge text eol=lf
+*.prefab -filter -diff -merge text eol=lf
+*.mat -filter -diff -merge text eol=lf
+*.anim -filter -diff -merge text eol=lf
+*.controller -filter -diff -merge text eol=lf
+*.physicMaterial -filter -diff -merge text eol=lf
+*.physicsMaterial2D -filter -diff -merge text eol=lf
+*.playable -filter -diff -merge text eol=lf
+*.mask -filter -diff -merge text eol=lf
+*.brush -filter -diff -merge text eol=lf
+*.flare -filter -diff -merge text eol=lf
+*.fontsettings -filter -diff -merge text eol=lf
+*.guiskin -filter -diff -merge text eol=lf
+*.giparams -filter -diff -merge text eol=lf
+*.renderTexture -filter -diff -merge text eol=lf
+*.spriteatlas -filter -diff -merge text eol=lf
+*.terrainlayer -filter -diff -merge text eol=lf
+*.mixer -filter -diff -merge text eol=lf
+*.shadervariants -filter -diff -merge text eol=lf
+
+# ソースコードは LF 固定
+*.cs text eol=lf
+*.shader text eol=lf
+*.hlsl text eol=lf
+*.cginc text eol=lf
+*.uss text eol=lf
+*.uxml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
