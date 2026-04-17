@@ -21,3 +21,7 @@ memory/patterns.md
 areas/
 projects/PRJ-*/
 archive/
+
+# 環境変数（APIキーなどの機密情報）
+.env
+.env.*
